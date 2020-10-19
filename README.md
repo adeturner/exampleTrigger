@@ -2,9 +2,9 @@
 
 Example of a cloud platform agnostic serverless event trigger
 
-Currently the infra build is just GCP with Pubsub and Firestore database
+This is a Pubsub specific trigger which receives the new message and depending on the message type either add, updates or deletes a database
 
-The use of github.com/adeturner/persistenceServices means extension to other clouds should be simple
+The database type is hidden from the trigger by the use of github.com/adeturner/persistenceServices.  This should mean extension to other databases should be simpler
 
 To add additional triggers into the project:
 
