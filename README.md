@@ -27,10 +27,10 @@ EOF
 ```bash
 cd build
 
-. 0_env.sh
+. build/0_env.sh
 . somedir/myenv.sh
 
-1_build_pubsub_sources.sh
+bash build/1_build_pubsub_sources.sh
 ```
 
 ## run test

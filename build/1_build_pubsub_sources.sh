@@ -4,7 +4,7 @@ export FUNCTION_NAME=SourcesExampleTrigger
 export FUNCTIONS_REGION=europe-west1
 export FUNCTION_LOWERCASE=`echo $FUNCTION_NAME | tr '[:upper:]' '[:lower:]'`
 export PUBSUB_ALLOWED_REGIONS=europe-west1,europe-west2,europe-west3
-export SERVICE_ACCOUNT=pubsub-triggers-srvacct
+export SERVICE_ACCOUNT=exampletrigger-srvacct
 export TOPIC_NAME=sourcesExampleTopic
 
 #####################################################################################################
@@ -41,7 +41,6 @@ gcloud projects add-iam-policy-binding ${GCP_PROJECT} \
    --member "serviceAccount:${SERVICE_ACCOUNT}@${GCP_PROJECT}.iam.gserviceaccount.com" --role "roles/pubsub.admin"
 
 gcloud iam service-accounts keys create ${GOOGLE_APPLICATION_CREDENTIALS} --iam-account "${SERVICE_ACCOUNT}@${GCP_PROJECT}.iam.gserviceaccount.com"
-
 
 gcloud functions deploy ${FUNCTION_NAME} \
  --entry-point ${FUNCTION_NAME} \

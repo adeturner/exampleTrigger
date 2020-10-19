@@ -18,7 +18,7 @@ func (d DocType) String() string {
 
 func (d DocType) Topic() string {
 	return [...]string{
-		"sourcesTopic",
+		"sourcesExampleTopic",
 		"Add other topic names...",
 	}[d]
 }

@@ -71,7 +71,7 @@ func SourcesExampleTrigger(ctx context.Context, m PubSubMessage) error {
 		}
 
 		if err != nil {
-			observability.Logger("Error", fmt.Sprintf("SourcesPubsubTrigger: Failed to write to persistenceLayer: %v", err))
+			observability.Logger("Error", fmt.Sprintf("Failed to write to persistenceLayer: %v", err))
 		}
 	}
 
