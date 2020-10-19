@@ -1,0 +1,21 @@
+
+https://cloud.google.com/pubsub/pricing
+Message ingestion and delivery are priced per volume of data transmitted in a calendar month. 
+The first 10 gigabytes of usage are free. After that, the price for ingestion or delivery of messages is $40 per TiB.
+Ingestion and delivery charges apply only to publish requests and data delivered using pull, streamingPull or push operations. Other operations are free.
+
+
+A message storage policy can result in additional region egress (network) fees if the policy forces the data
+to exit a Google Cloud region. Consider a message that is:
+
+Published in region A
+Routed to region B for storage
+Delivered to a subscriber client in region C
+
+In this case:
+The project that contains the topic is billed for network egress from region A to region B.
+The project that contains the subscription is billed for egress from region B to region C.
+
+Function docs... https://cloud.google.com/functions/docs/calling/pubsub
+Authentication... https://cloud.google.com/pubsub/docs/authentication
+Pubsub Docs... https://cloud.google.com/pubsub/docs/quickstart-client-libraries
