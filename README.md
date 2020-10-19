@@ -25,11 +25,12 @@ EOF
 ## Deploy function
 
 ```bash
-cd build
 
-. build/0_env.sh
+# set up environment usng your custom script
+# . build/0_env.sh
 . somedir/myenv.sh
 
+# NOTE: you have to run this from the root, otherwise the function doesnt deploy
 bash build/1_build_pubsub_sources.sh
 ```
 
